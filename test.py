@@ -5,14 +5,19 @@ Created on Tue Mar 14 15:48:01 2023
 @author: Hannah
 """
 
-from cq import CircularQueue
+from my_cq import CircularQueue
 
 cq = CircularQueue()
-print("Starting Size", len(cq) )
-cq.enqueue("a")
-cq.enqueue("b")
-cq.enqueue("c")
-print("Current Size", len(cq) )
-print("Current Head", cq.first())
+
+print ("Starting size: ", len(cq))
+cq.enqueue("A")
+cq.enqueue("B")
+cq.enqueue("C")
+print ("Size after enqueuing 3 items: ", len(cq))
+print ("First item: ", cq.first())
 cq.rotate()
-print("Current Head after rotating", cq.first())
+print ("First item after rotation: ", cq.first())
+print ("Does the queue contain E? ", cq.contains("E"))
+print ("Does the queue contain A? ", cq.contains("A"))
+
+
